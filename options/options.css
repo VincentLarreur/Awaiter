@@ -1,0 +1,58 @@
+html {
+    background: linear-gradient(to top, #1a2a6c, #b21f1f, #fdbb2d);
+    background-image: url('../ressources/background.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    font-family: Futura;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: white;
+}
+
+.header {
+  flex: 1;
+}
+
+.header .date {
+  display: inline-flex;
+}
+
+.header .date > div {
+  margin: 15px;
+}
+
+.datepicker {
+  flex: 1;
+}
+
+.datepicker #date {
+  color: white;
+  border-color: white;
+  background-color: transparent;
+}
+
+.datepicker #date:hover {
+  background-color:rgba(0, 0, 0, 0.3);
+  transition: all 1s ease-in-out;
+}
+
+.icons {
+}
+
+.icons a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    margin: 15px;
+}

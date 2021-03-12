@@ -4,17 +4,7 @@
   "description": "Awaiter extension",
   "permissions": ["storage"],
   "background": {
-    "scripts": ["js/background.js"],
-    "persistent": true
-  },
-  "page_action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "ressources/logo16.png",
-      "32": "ressources/logo32.png",
-      "48": "ressources/logo48.png",
-      "128": "ressources/logo128.png"
-    }
+    "service_worker": "background.js"
   },
   "icons": {
     "16": "ressources/logo16.png",
@@ -22,5 +12,15 @@
     "48": "ressources/logo48.png",
     "128": "ressources/logo128.png"
   },
-  "manifest_version": 2
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "ressources/logo16.png",
+      "32": "ressources/logo32.png",
+      "48": "ressources/logo48.png",
+      "128": "ressources/logo128.png"
+    }
+  },
+  "options_page": "options/options.html",
+  "manifest_version": 3
 }

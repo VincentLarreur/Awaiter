@@ -4,40 +4,35 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./options.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../ressources/dist/simplepicker.css" />
-    <script src="../ressources/dist/simplepicker.min.js"></script>
+    <link rel="stylesheet" href="../ressources/dist/mc-calendar.min.css" />
+    <script src="../ressources/dist/mc-calendar.min.js"></script>
   </head>
   <body>
-    <div class="header">
-      <h1>REACHING YOUR GOAL IN</h1>
-      <div>
-        <div class="date">
-          <div class="weeks">
-            <p>00</p>
-            <p>WEEKS</p>
-          </div>
-          <div class="days">
-            <p>00</p>
-            <p>DAYS</p>
-          </div>
-          <div class="hours">
-            <p>00</p>
-            <p>HOURS</p>
-          </div>
-          <div class="minutes">
-            <p>00</p>
-            <p>MINUTES</p>
-          </div>
+    <div class="container">
+      <h1 id="headline">REACHING YOUR GOAL IN</h1>
+      <div id="countdown">
+        <ul>
+          <li><span id="weeks"></span>weeks</li>
+          <li><span id="days"></span>days</li>
+          <li><span id="hours"></span>Hours</li>
+          <li><span id="minutes"></span>Minutes</li>
+          <li><span id="seconds"></span>Seconds</li>
+        </ul>
+      </div>
+      <div class="message">
+        <div id="content">
+          <span class="emoji">🥳</span>
+          <span class="emoji">🎉</span>
+          <span class="emoji">🎯</span>
         </div>
       </div>
     </div>
     <div class="datepicker">
-      <button id="date" class="simplepicker-btn">Choose Date</button>
+      <input id="date" type="text" oninput="console.log('lala')" />
     </div>
     <div class="icons">
       <a href="https://www.linkedin.com/in/vincent-larreur/" class="fa fa-linkedin"></a>
       <a href="https://github.com/VincentLarreur" class="fa fa-github"></a>
-      <a href="#" class="fa fa-google"></a>
     </div>
   </body>
   <script src="options.js"></script>

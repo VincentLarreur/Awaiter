@@ -1,3 +1,85 @@
-html {
-    background: blue;
+
+/* general styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  align-items: center;
+  background: linear-gradient(to bottom, #833ab4, #fd1d1d, #fcb045);
+  display: flex;
+  font-family: -apple-system, 
+    BlinkMacSystemFont, 
+    "Segoe UI", 
+    Roboto, 
+    Oxygen-Sans, 
+    Ubuntu, 
+    Cantarell, 
+    "Helvetica Neue", 
+    sans-serif;
+}
+
+.container {
+  color: white;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+}
+
+li {
+  display: inline-block;
+  font-size: 1em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 3.5rem;
+}
+
+.message {
+  font-size: 3rem;
+}
+
+#content {
+  display: none;
+  padding: 1rem;
+}
+
+.emoji {
+  padding: 0 .25rem;
+}
+
+#btn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  text-align: center;
+  font-size: 1.4em;
+  cursor: pointer;
+  margin: 1em 0;
+  font-weight: 200;
+  font-size: 1.2em;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+#separator {
+  height: 1px;
+  background-color: white;
+  width: 80%;
+  margin: 0 10%;
 }

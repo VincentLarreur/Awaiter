@@ -12,7 +12,7 @@
     "48": "ressources/logo48.png",
     "128": "ressources/logo128.png"
   },
-  "action": {
+  "browser_action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "ressources/logo16.png",
@@ -22,5 +22,5 @@
     }
   },
   "options_page": "options/options.html",
-  "manifest_version": 3
+  "manifest_version": 2
 }

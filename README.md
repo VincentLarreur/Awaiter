@@ -6,7 +6,7 @@ Awaiter is a chrome extension that aims to help you with that and provide you a 
 ![screen Awaiter](./ressources/screens/screenAwaiter.png) 
 
 
-Simply download it and set up your goal date on the options page.
+Simply [download](https://chrome.google.com/webstore/detail/awaiter/ckhlopfocebddgfgimahcjfnicihipaf/related?hl=fr) it and set up your goal date on the options page.
 
 ## Author 
 

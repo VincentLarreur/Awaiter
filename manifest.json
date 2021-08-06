@@ -1,8 +1,8 @@
 {
   "name": "Awaiter",
-  "version": "1.0",
+  "version": "1.2",
   "description": "Awaiter extension",
-  "permissions": ["storage"],
+  "permissions": ["storage", "alarms"],
   "background": {
     "service_worker": "background.js"
   },
@@ -12,7 +12,7 @@
     "48": "ressources/logo48.png",
     "128": "ressources/logo128.png"
   },
-  "browser_action": {
+  "action": {
     "default_popup": "popup/popup.html",
     "default_icon": {
       "16": "ressources/logo16.png",
@@ -22,5 +22,5 @@
     }
   },
   "options_page": "options/options.html",
-  "manifest_version": 2
+  "manifest_version": 3
 }

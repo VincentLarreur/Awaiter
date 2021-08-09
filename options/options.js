@@ -20,9 +20,7 @@ let countdown = document.getElementById("countdown");
 let content = document.getElementById("content");
 
 x = setInterval(function() {
-  chrome.storage.local.set({date: new Date(input.value).toISOString()}, function() {
-    console.log('new date is stored ' + new Date(input.value).toISOString());
-  });
+  chrome.storage.local.set({date: new Date(input.value).toISOString()});
   let now = new Date().getTime();
   distance = new Date(input.value).getTime() - now;
 
@@ -45,12 +43,14 @@ x = setInterval(function() {
 
     const weeks = Math.floor(distance / (week));
     if(weeks > 0) {
-        chrome.action.setBadgeText({text: `${weeks}w`});
+      chrome.action.setBadgeText({text: `${weeks}w`});
     } else {
-        const days = Math.floor((distance % (week)) / (day));
-        if (days > 0) {
-            chrome.action.setBadgeText({text: `${days}d`});
-        }
+      const days = Math.floor((distance % (week)) / (day));
+      if (days > 0) {
+          chrome.action.setBadgeText({text: `${days}d`});
+      } else {
+        chrome.action.setBadgeText({text: `<1d`});
+      }
     }
   }
 }, 250);

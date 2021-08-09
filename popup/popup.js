@@ -10,12 +10,12 @@ let countdown = document.getElementById("countdown");
 let content = document.getElementById("content");
 let button = document.getElementById("btn");
 
-button.addEventListener("click", function() { 
+button.addEventListener("click", () => { 
     chrome.runtime.openOptionsPage();
 });
 
-x = setInterval(function() {
-    chrome.storage.local.get(['date'], function(result) {
+x = setInterval(() => {
+    chrome.storage.local.get(['date'], (result) => {
     let now = new Date().getTime();
     distance = new Date(result.date).getTime() - now;
 

@@ -19,16 +19,18 @@ chrome.alarms.onAlarm.addListener(() => {
     let now = new Date().getTime();
     distance = new Date(result.date).getTime() - now;
 
-    const weeks = Math.floor(distance / (week));
     chrome.action.setBadgeText({text: 'None'});
-    if(weeks > 0) {
-      chrome.action.setBadgeText({text: `${weeks}w`});
-    } else {
-      const days = Math.floor((distance % (week)) / (day));
-      if (days > 0) {
-        chrome.action.setBadgeText({text: `${days}d`});
+    if (distance > 0) {
+      const weeks = Math.floor(distance / (week));
+      if(weeks > 0) {
+        chrome.action.setBadgeText({text: `${weeks}w`});
       } else {
-        chrome.action.setBadgeText({text: `<1d`});
+        const days = Math.floor((distance % (week)) / (day));
+        if (days > 0) {
+          chrome.action.setBadgeText({text: `${days}d`});
+        } else {
+          chrome.action.setBadgeText({text: `<1d`});
+        }
       }
     }
   });

@@ -40,16 +40,17 @@ x = setInterval(function() {
     headline.innerText = "REACHING YOUR GOAL IN";
     countdown.style.display = "block";
     content.style.display = "none";
-
-    const weeks = Math.floor(distance / (week));
-    if(weeks > 0) {
-      chrome.action.setBadgeText({text: `${weeks}w`});
-    } else {
-      const days = Math.floor((distance % (week)) / (day));
-      if (days > 0) {
-          chrome.action.setBadgeText({text: `${days}d`});
+    if (distance > 0) {
+      const weeks = Math.floor(distance / (week));
+      if(weeks > 0) {
+        chrome.action.setBadgeText({text: `${weeks}w`});
       } else {
-        chrome.action.setBadgeText({text: `<1d`});
+        const days = Math.floor((distance % (week)) / (day));
+        if (days > 0) {
+            chrome.action.setBadgeText({text: `${days}d`});
+        } else {
+          chrome.action.setBadgeText({text: `<1d`});
+        }
       }
     }
   }
